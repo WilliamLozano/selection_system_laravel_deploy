@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Montserrat&family=Poppins:wght@300&family=Tilt+Prism&display=swap');
+
+
+
+/*------------------------------------------------------------*/
+.content{
+    grid-area: content ;
+    height:100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:"controles busqueda" ;
+}
+.controles{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.filtro{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background: gray;
+    width: 80%;
+    margin-top: 5px;
+    border:3px solid #FFD966;
+
+}
+.boton-crear{
+    text-decoration: none;
+    color:black;
+    background-color: #FFD966;
+}
+.boton-ver{
+    text-decoration: none;
+    color: #000000;
+    background-color: #4D4D4D;
+}
+.retroceso{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 3px;
+
+}
+.retroceso .boton{
+    background-color: #FFD966;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.retroceso .boton:hover{
+    color: white;
+    background-color: #4D4D4D;
+    transition: 0.3s;
+
+}
+.inicio-boton{
+    text-decoration: none;
+    color: #000000;
+}
+.filtro .boton{
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 120px;
+    margin-top: 5px;
+    border: 4px solid;
+    cursor: pointer;
+}
+.boton-ver:hover{
+    color: #FFD966;
+    box-shadow:0 0 3px #ffffc5;
+    transition: 0.3s;
+}
+.boton-crear:hover{
+    color: gray;
+    box-shadow:0 0 7px #fffdfd;
+    transition: 0.3s;
+}
+
+.logo{
+    width: 100%;
+}
+
+
+
+/*------------------------------------------------------------*/
+.busqueda-empresas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.barra{
+border-bottom:3px solid #FFD966;
+width: 100%;
+height: 7%;
+}
+samp{
+    color: white;
+    font-size: xx-large
+}
+samp.amarillo{
+    color: #FFD966;
+}
+/*------------------------------------------------------------*/
+.recuadro{
+
+    background-color: rgb(126, 126, 126);
+    width: 70%;
+    height: 80%;
+    margin-top: 10Px;
+    padding: 5px;
+    display: grid;
+    grid-template-areas:"cargos cargos"
+    "especializacion especializacion";
+    gap:20px;
+    border-radius: 20px;
+    border: 5px solid rgb(127, 127, 127);
+
+}
+.recuadro section{
+    border-radius: 10px;
+    background-color: rgb(186, 186, 186);
+    border:3px solid #242424;
+    gap: 20px;
+}
+/* ------------------------------------------------------------ */
+
+
+
+
+.poner-cargos, .especilaizaciones {
+    display: flex;
+    width: 100%;
+    align-items: end;
+}
+.cargos label{
+    width: 100%;
+
+
+
+}
+label input{
+    border:none;
+
+}
+label input:hover{
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow:0 0 8px  #242424;
+
+}
+.cargos label input{
+    width: 90%;
+    height: 40px;
+    border: none;
+}
+/* ------------------------------------------------------------ */
+
+
+
+
+
+/*------------------------------------------------------------*/
+

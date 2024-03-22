@@ -1,0 +1,237 @@
+
+
+
+
+
+.contenido{
+    display: grid;
+    grid-area: content;
+    grid-template-columns:250px auto ;
+    /* grid-template-columns: 15% 85%; */
+}
+
+.controles-registro{
+    border-right:3px solid #FFD966;
+}
+
+.filtro{
+    display: grid;
+    background: rgb(0, 0, 0);
+    border-bottom:1px solid #FFD966;
+
+}
+.botones{
+    margin: 2%;
+    padding: 2%;
+    display: grid;
+    grid-row: auto;
+    font-size:20px;
+
+
+}
+.boton-crear{
+    text-decoration: none;
+    color:rgb(255, 217, 102);
+
+    background-color: #000000;
+}
+.boton-ver{
+
+    text-decoration: none;
+    color:#bdbdbd;
+    background-color: #000000;
+}
+
+.boton-crear:hover{
+    background-color:rgb(255, 217, 102);
+    color: #000000;
+    transition: 0.3s;
+}
+.boton-ver:hover{
+    background-color: #bdbdbd;
+    color: #000000;
+    transition: 0.3s;
+
+}
+
+.retroceso{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 3px;
+
+}
+.retroceso .boton{
+    background-color: #FFD966;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.retroceso .boton:hover{
+    color: white;
+    background-color: #4D4D4D;
+    transition: 0.3s;
+
+}
+.inicio-boton{
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo{
+    width: 100%;
+}
+/*-----------------------------------create-----------------------------------------*/
+.formularios{
+    display: grid;
+    grid-template-rows: 40px auto;
+
+}
+
+.barra{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    border-bottom: 3px solid #FFD966;
+    font-size:auto;
+}
+.barra .amarillo{
+    color: #FFD966;
+}
+/*-------------------------------------create2---------------------------------------*/
+.registro{
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns:auto 60% auto;
+    grid-template-rows: auto 90% auto;
+}
+
+.registro-form {
+    display: grid;
+    background-color:aliceblue;
+    border-radius:10px;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+
+
+}
+.registro-form .datos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    margin: 7px;
+}
+
+/*------------------------------------index-------------------------------------------*/
+.index{
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    
+
+}
+
+
+/* .mostar-datos{
+    display: flex;
+    flex: auto;
+    background-color:rgb(255, 255, 255);
+    overflow-y: scroll;
+    height:auto;
+    margin-left: 5%;
+    margin-right: 10%;
+    
+} */
+.mostar-datos {
+    display: flex;
+    flex: auto;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgb(225, 202, 54) 100%);
+    overflow-y: scroll;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 20%;
+    border-radius: 10px;
+    border: 3px solid #fff700;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+span {
+    font-size: 25px; 
+    text-align: center;
+}
+
+samp {
+    font-size: 25px;
+}
+
+.amarillo {
+    font-size: 25px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 15px;
+}
+.mostar-datos::-webkit-scrollbar{
+    color: chartreuse;
+}
+
+.datos-registro{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: space-around;
+    height: 350px;
+    margin: 1%;
+    width: 290px;
+    /**-------------------------------*/
+    border-radius: 15px;
+    background-color:#ffffff;
+    border: solid 3px  #FFD966;
+    
+    
+}
+.datos-registro a,.datos-registro input{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding:0px 30px 0px 30px ;
+
+
+
+}
+.datos-registro .update {
+    background-color:#FFD966;
+}
+.datos-registro .show {
+    background-color:rgb(57, 162, 0);
+}
+.datos-registro .delete{
+    background-color:rgb(255, 84, 84);
+}
+.datos-registro a:hover, .datos-registro .delete:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+    /*box-shadow:  10px 5px rgba(146, 146, 146, 0.5)*/
+}
+
+
+
+
+
+
+
+
+
+

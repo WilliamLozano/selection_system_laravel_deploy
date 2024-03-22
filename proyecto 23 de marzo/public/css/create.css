@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Montserrat&family=Poppins:wght@300&family=Tilt+Prism&display=swap');
+
+
+
+
+
+.cabeza
+{
+
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 3px #FFD969 solid;
+
+    color: white    ;
+    font-size: 30px;
+    width: 100%;
+    height: 50%;
+
+
+
+}
+
+.create{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffefc0;
+    width: 100%;
+    height: 50%;
+
+
+}
