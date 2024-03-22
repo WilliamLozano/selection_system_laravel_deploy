@@ -16,7 +16,7 @@ class Habilidad extends Model
         'id_cargo'
     ];
 
-    public function cargo(){
-        return $this->belongs(User::class, 'id_cargo', 'id');
-    }
+    // public function cargo(){
+    //     return $this->belongs(User::class, 'id_cargo', 'id');
+    // }
 }

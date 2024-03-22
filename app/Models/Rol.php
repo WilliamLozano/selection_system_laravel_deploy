@@ -12,7 +12,8 @@ class Rol extends Model
     protected $table = 'roles';
 
     protected $fillable = [
-        'nombre',
+        'nombre_rol',
+        'descripcion'
     ];
 
     // Relación con el modelo de Candidato

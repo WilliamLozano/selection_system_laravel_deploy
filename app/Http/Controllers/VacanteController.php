@@ -1,10 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Vacante;
+use App\Models\Cargo;
 
-use App\Http\Controllers\Controller;
+use App\Models\Empresa;
+use App\Models\Horario;
+use App\Models\Salario;
+use App\Models\Vacante;
+use App\Models\Contrato;
+use App\Models\Municipio;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class VacanteController extends Controller
 {
@@ -37,7 +43,22 @@ class VacanteController extends Controller
     }
 
     public function create(){
-        return view('vacante.create');
+        $empresas =Empresa::all();
+        $cargos =Cargo::all();
+        $contratos =Contrato::all();
+        $salarios = Salario::all();
+        $horarios = Horario::all();
+        $municipios = Municipio::all();
+        return view('vacante.create',
+            compact(
+            'empresas',
+            'cargos',
+            'contratos',
+            'salarios',
+            'horarios',
+            'municipios'
+
+        ));
     }
 
     public function index(){

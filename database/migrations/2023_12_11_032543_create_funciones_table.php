@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('funciones', function (Blueprint $table) {
             $table->id();
-            $table->string('funcion');
+            $table->text('funcion');
             $table->unsignedBigInteger('id_ocupacion');
             $table->foreign('id_ocupacion')->references('id')->on('ocupaciones');
             $table->timestamps();

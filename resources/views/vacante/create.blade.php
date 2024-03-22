@@ -3,7 +3,7 @@
 
 @section('content')
 
-    
+
 
 
     <section class="contenido">
@@ -13,7 +13,7 @@
 
             </section>
             <section class="filtro">
-                
+
                 <a  class="boton-crear" href="{{route('ocupacion.create')}}">ocupaciones</a>
                 <a  class="boton-crear" href="{{route('cargo.create')}}">crear cargo</a>
                 <a  class="boton-crear" href="{{route('salario.create')}}">crear salario</a>
@@ -35,63 +35,82 @@
 
         </section>
         <section class="registro">
-                <form action="{{route('vacante.store')}}" method="post" class="registro-form">
+            <section class="registro-form">
+                <form action="{{route('vacante.store')}}" method="post" class="registro-form4656">
+
                     @csrf
-                        <section class="datos">
-                            
+                        <section class="datos ">
 
+                                <label>empresa</label>
 
+                                   <select name='id_empresa' class="datos">
+                                    @foreach ($empresas as $empresa)
+                                    <option value="{{$empresa->id}}">{{$empresa->nombre_empresa}}</option>
+                                    @endforeach
 
-                                <label for="empresa">
-                                    empresa<input id="empresa" name="id_empresa">
-                                </label>
+                                   </select>
 
-                                <label for="cargo_principal">
-                                    <h2>cargo </h2>
-                                    <input id="cargo_principal" name="id_cargo">
-                                </label>
+                                <label>cargo</label>
 
-                                <label for="numero_vacante">
-                                    <h1>numero de vacantes</h1>
-                                    <input id="numero_vacante" name="numero_vacante">
-                                </label>
+                                <select name='id_cargo' class='datos'>
 
+                                    @foreach ($cargos as $cargo)
+                                    <option value="{{$cargo->id}}">{{$cargo->nombre_cargo}}</option>
+                                    @endforeach
+                                </select>
 
-                            
-
-
-
-                        </section >
-
-                        <section class="datos">
                             <label for="meses_experiencia">
                                 <h1>meses de experiencia</h1>
                                 <input id="meses_experiencia" name="meses_experiencia">
                             </label>
 
-                            <label for="tipo_contrato">
-                                <h1>tipo de contrato</h1>
-                                <input id="tipo_contrato" name="id_contrato">
-                            </label>
 
-                            <label for="tipo_salrio">
-                                <h1>tipo de salrio</h1>
-                                <input id="tipo_salario" name="id_salario">
-                            </label>
+                            <label class="datos">tipo de contrto</label>
+                            <select name='id_contrato' class='datos'>
+
+                                @foreach ($contratos as $contrato)
+                                <option value="{{$contrato->id}}">{{$contrato->nombre_contrato}}</option>
+                                @endforeach
+                            </select>
+
+
+                            <label class="datos">tipo de salario</label>
+                            <select name='id_salario' class='datos'>
+
+                                @foreach ($salarios as $salario)
+                                <option value="{{$salario->id}}">{{$salario->nombre_salario}}</option>
+                                @endforeach
+                            </select>
+
 
                             <label for="salario">
                                 <h1>salario</h1>
                                 <input id="salario" name="salario">
                             </label>
 
+
                             <label for="jornada_laboral">
                                 <h1>jornada laboral</h1>
                                 <input id="jornada_laboral" name="id_horario">
                             </label>
 
-                        </section>
+                            <label class="datos">tipo de jornada</label>
+                            <select name='id_horario' class='datos'>
 
-                        <section class="datos">
+                                @foreach ($horarios as $horario)
+                                <option value="{{$horario->id}}">{{$horario->nombre_horario}}</option>
+                                @endforeach
+                            </select>
+
+
+
+
+
+                        <label for="numero_vacante">
+                                    <h1>numero de vacantes</h1>
+                                    <input id="numero_vacante" name="numero_vacante">
+                                </label>
+
                             <label for="pais">
                                 <h1>pais</h1>
                                 <input id="pais" name="pais" value="Colombia">
@@ -99,31 +118,38 @@
 
 
 
-                            <label for="ciudad">
-                                <h1>municipio</h1>
-                                <input id="ciudad" name="id_municipio">
-                            </label>
+                            <label class="datos">ciudad</label>
+
+                            <select name='id_municipio' class='datos'>
+
+                                @foreach ($municipios as $municipio)
+                                <option value="{{$municipio->id}}">{{$municipio->nombre_municipio}}</option>
+                                @endforeach
+                            </select>
 
                             <label for="fecha_inicio">
                                 <h1>fecha de inicio</h1>
-                                <input id="ciudad" name="fecha_inicio">
+                                <input  name="fecha_inicio">
                             </label>
 
                             <label for="fecha_cierre">
                                 <h1>fecha de cierre</h1>
-                                <input id="ciudad" name="fecha_cierre">
+                                <input name="fecha_cierre">
                             </label>
 
-                            </section >
 
-                            <section class="archivar">
-                                <h1>registar manual de funciones </h1>
+
+                            <p class="datos">
                                 <button type="submit">
                                 enviar
                                 </button>
+                            </p>
+
 
                         </section>
+
                     </form>
+                </section>
 
                 </section>
 

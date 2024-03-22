@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empresa;
-
+use App\Models\Municipio;
+use Spatie\FlareClient\View;
 
 class EmpresaController extends Controller
 {
+    
     public function create()
     {
         //
-        return view('empresa.create');
+        $municipios = Municipio::all();
+        return view('empresa.create', compact('municipios'));
     }
 
     public function index()
@@ -77,4 +80,7 @@ class EmpresaController extends Controller
 
 
     }
+
+
+    
 }

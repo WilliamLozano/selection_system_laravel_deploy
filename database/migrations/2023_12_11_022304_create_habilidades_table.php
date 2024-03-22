@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('habilidades', function (Blueprint $table) {
             $table->id();
             $table->string('habilidad');
-            $table->unsignedBigInteger('id_cargo');
-            $table->foreign('id_cargo')->references('id')->on('cargos');
+            $table->unsignedBigInteger('id_ocupacion');
+            $table->foreign('id_ocupacion')->references('id')->on('ocupaciones');
             $table->timestamps();
         });
     }

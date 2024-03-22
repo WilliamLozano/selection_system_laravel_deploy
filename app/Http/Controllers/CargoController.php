@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Cargo;
+use App\Models\Ocupacion;
+use Illuminate\Http\Request;
 
 class CargoController extends Controller
 {
@@ -12,13 +13,14 @@ class CargoController extends Controller
         Cargo::create([
             'nombre_cargo'=>$request->nombre_cargo,
             'descripcion'=>$request->descripcion,
-            'codigo_ocupacion'=>$request->codigo_ocupacion
+            'id_ocupacion'=>$request->id_ocupacion
         ]);
 
         return redirect()->back()->with('succes','cargo creada');
     }
 
     public function create(){
-        return view('cargo.create');
+        $ocupaciones=Ocupacion::all();
+        return view('cargo.create', compact('ocupaciones'));
     }
 }

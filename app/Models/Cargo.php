@@ -15,12 +15,9 @@ class Cargo extends Model
 
         'nombre_cargo',
         'descripcion',
-        'codigo_ocupacion'
+        'id_ocupacion'
     ];
 
-    public function competencia(){
-        return $this->hasMany(Competencia::class, 'id_cargo', 'id');
-    }
 
 
     public function vacante(){

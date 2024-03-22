@@ -3,7 +3,7 @@
 
 @section('content')
 
-    
+
 
 
     <section class="contenido">
@@ -13,11 +13,11 @@
 
             </section>
             <section class="filtro">
-                
-                
-                <a  class="boton-crear" href="{{route('vacante.create')}}">crear vacante</a>
-                <a  class="boton-crear" href="{{route('ocupacion.create')}}">crear ocupacion</a>
-                
+
+
+                <a  class="boton-crear" href="{{route('cargo.create')}}">crear cargo</a>
+                <a  class="boton-ver" href="{{route('ocupacion.index')}}">ver ocupacion</a>
+
 
             </section>
             <section class="retroceso">
@@ -33,18 +33,18 @@
 
         </section>
         <section class="registro">
-                <form action="{{route('vacante.store')}}" method="post" class="registro-form">
+                <form action="{{route('ocupacion.store')}}" method="post" class="registro-form">
                     @csrf
                         <section class="datos">
 
                         ocupacion<input type="text" name="nombre_ocupacion">
 
 
-                        
+
                             </section >
 
-                            <section class="archivar">
-                                
+                            <section class="datos">
+
                                 <button type="submit">
                                 enviar
                                 </button>

@@ -33,7 +33,7 @@
             <section class="contenedor-footer">
 
                     <article class="contenedor-imagen">
-                        <img class="logo-png" src="{{ asset('img/logo-png.png') }}" >
+                        <img class="logo-png" src="{{ asset('image/logo-png.png') }}" >
                     </article>
 
                     <section class="informacion">

@@ -17,7 +17,7 @@ class Funcion extends Model
     ];
 
 
-    public function ocupacion(){
-        return $this->belongs(Funcion::class, 'id_ocupacion', 'id');
-    }
+    // public function ocupacion(){
+    //     return $this->belongs(Funcion::class, 'id_ocupacion', 'id');
+    // }
 }

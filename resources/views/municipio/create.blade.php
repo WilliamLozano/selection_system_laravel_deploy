@@ -9,18 +9,12 @@
 
         <section class="filtro">
             <section class="botones">
-                
-                <a class=" boton-crear">ver oferta</a>
-                <a class=" boton-ver" href="{{ route('empresa.index') }}">back</a>
-                <a class="boton-ver" href="{{route('municipio.index')}}">municipios</a>
-                    
+
+                <a class=" boton-crear" href="{{route('departamento.create')}}">crear departamento</a>
+                <a class="boton-ver" href="{{route('municipio.index')}}">ver municipios</a>
 
 
-
-
-                
-                
-            </section> 
+            </section>
         <!--------------------------------------------------------------------------------------------------------------------------------------------->
         </section>
         <section class="retroceso">
@@ -28,17 +22,33 @@
         </section>
 
     </section>
-    
+
 <section class="registro">
 
 <form action="{{route('municipio.store')}}" method="post" class="registro-form">
 
 
 @csrf
-<section class="datos">
+    <section class="datos">
+
+            <label>departamentos</label>
+            <select name="id_departamento" class="datos">
+                @foreach($departamentos as $departamento)
+                <option value="{{ $departamento->id }}">{{ $departamento->nombre_departamento }}</option>
+                @endforeach
+            </select>
+
+
+
+
+
+
+
+
+
 
     municipio <input type="text" name="nombre_municipio">
-    
+
 
     <button type="submit">
         enviar
