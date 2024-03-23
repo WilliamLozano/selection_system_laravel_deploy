@@ -1,7 +1,10 @@
 {{-- NO LE PUSE NADA DE ESTILOS, PORFAVOR PETER PONERLOS, XFA QUE NO SE DONDE ANDAN --}}
+@extends('layouts.app1')
+
+@section('content')
 
 
-<div class="container">
+<div class="container-1 ">
     <h1>Crear Nuevo Resultado de Proceso</h1>
     <form action="{{ route('resultados.store') }}" method="POST">
         @csrf
@@ -35,14 +38,16 @@
             </select>
         </div>
         
-        <!-- Campo para el resultado del proceso -->
         <div class="form-group">
             <label for="resultado">Resultado del Proceso:</label>
             <input type="text" id="resultado" name="resultado" class="form-control" placeholder="Ingrese el resultado del proceso">
         </div>
+        
 
         <!-- Botón para enviar el formulario -->
         <button type="submit" class="btn btn-primary">Crear Resultado de Proceso</button>
     </form>
 </div>
+
+@endsection
 

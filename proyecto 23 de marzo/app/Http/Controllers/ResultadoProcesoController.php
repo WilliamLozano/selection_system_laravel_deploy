@@ -23,9 +23,8 @@ class ResultadoProcesoController extends Controller
         $candidatos = Candidato::all();
         $procesosSeleccion = ProcesoSeleccion::all();
         $etapasProceso = EtapaProceso::all();
-
         // Retornar la vista con los datos necesarios
-        return view('resultados.create', compact('candidatos', 'procesosSeleccion', 'etapasProceso'));
+        return view('resultados.create', compact('candidatos', 'procesosSeleccion', 'etapasProceso',));
     }
 
     public function store(Request $request)
@@ -44,7 +43,7 @@ class ResultadoProcesoController extends Controller
                 'candidato_id' => $request->input('candidato_id'),
                 'etapa_proceso_id' => $request->input('etapa_proceso_id'), // Aquí se captura el valor de etapa_id
                 'proceso_seleccion_id' => $request->input('proceso_seleccion_id'), 
-                'resultado' => $request->input('resultado'),
+                'resultado' => $request->input('resultado'), // Guardar el valor del resultado del proceso
             ]);
             
         
@@ -53,6 +52,7 @@ class ResultadoProcesoController extends Controller
         } catch (\Exception $e) {
             // Imprimir el mensaje de error
             dd($e->getMessage());
+            
         }
     }
 
